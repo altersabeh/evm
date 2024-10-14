@@ -153,7 +153,7 @@ function evm_install() {
   local DONT_ASK="$2"
   local BUILD_DOCS="$3"
   local EXPAND_BIN="$4"
-  local EXTRA=${@:5}
+  local EXTRA=${ERLANG_CONFIGURE_OPTS:-${@:5}}
 
   # Download version only if it does not existed cached
   if [[ -f "$DEFAULT_TAR_LOCATION$FILE_PREFIX$VER$FILE_EXTENSION" ]]; then
